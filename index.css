@@ -14,10 +14,6 @@
     position: relative;
     font-family: sans-serif;
     background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center; /* Centers content horizontally */
-    align-items: center; /* Centers content vertically */
-    text-align: center; /* Centers text */
 }
 
 /* Navbar Styling */
@@ -27,11 +23,11 @@
     justify-content: center; /* Centers the menu horizontally */
     padding: 1.5rem 0;
     align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-top: 5%; /* Adds space below the profile section */
 }
 
+/* Logo size and cursor on hover */
 .navbar .logo {
     width: 160px;
     cursor: pointer;
@@ -40,7 +36,6 @@
 /* Menu Items Styling */
 ul {
     margin-top: 0;
-    display: flex; /* Align items horizontally */
 }
 
 ul li {
@@ -349,19 +344,5 @@ body {
         padding: 0.5rem;
     }
 
-    /* Adjust profile section for mobile */
-    .info {
-        padding-left: 0;
-        margin-top: 2rem;
-    }
-
-    .profile-image {
-        margin-left: 0;
-        margin-top: 1rem;
-        width: 150px;
-        height: 150px;
-    }
-
-    .text {
-        padding: 0 1rem; /* Add some padding to text */
-   
+    
+}
