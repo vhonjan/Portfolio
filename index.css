@@ -8,30 +8,26 @@
 /* Main section */
 .main {
     width: 100%;
-    background: url(1.jpg) no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+    background: url(1.jpg) no-repeat center center fixed; /* Ensure the background is centered and fixed */
+    background-size: cover; /* Ensures the background image covers the whole screen */
+    height: 100vh; /* Makes the section take the full height of the viewport */
     position: relative;
     font-family: sans-serif;
     background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* Ensure text stays centered */
 }
 
 /* Navbar Styling */
 .navbar {
-    width: 100%;
+    width: 100%; /* Make it take up the full width */
     display: flex;
-    justify-content: space-between; /* Makes the navbar items spread out */
-    padding: 1.5rem 2rem;
+    justify-content: center; /* Centers the menu horizontally */
+    padding: 1.5rem 0;
     align-items: center;
-    position: absolute; /* Position navbar at the top of the screen */
-    top: 0;
-    left: 0;
+    position: relative;
+    margin-top: 5%; /* Adds space below the profile section */
 }
 
+/* Logo size and cursor on hover */
 .navbar .logo {
     width: 160px;
     cursor: pointer;
@@ -40,11 +36,11 @@
 /* Menu Items Styling */
 ul {
     margin-top: 0;
-    display: flex; /* Make the menu items align horizontally */
 }
 
 ul li {
     list-style: none;
+    display: inline-block;
     padding: 0.625rem 1rem;
 }
 
@@ -52,34 +48,54 @@ ul li a {
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: black; /* Changed to black */
     transition: 0.4s ease;
 }
 
 ul li a:hover {
-    color: black;
+    color: black; /* Hover color also black */
 }
 
 /* Flexbox for .info section to align the profile image and text */
 .info {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    padding-left: 8%;
-    z-index: 2; /* Ensure profile text stays above background */
+    justify-content: center; /* Centers everything horizontally */
+    flex-direction: column; /* Stacks the elements vertically */
+    align-items: center; /* Centers content vertically */
+    margin-top: 2%; /* Further reduced margin-top to move content higher */
+    padding-left: 8%; /* Shifted slightly to the left */
 }
 
-/* Profile Image */
+/* Text styling */
+.hi-text {
+    font-size: 1.5rem; /* Smaller font for "Hi, I'm" */
+    color: black; /* Changed to black */
+    margin-bottom: 0.5rem;
+}
+
+.large-name {
+    font-size: 4rem; /* Adjust the size as needed */
+    font-weight: 700;
+    color: black; /* Changed to black */
+}
+
+.small-name {
+    font-size: 1.5rem; /* Smaller font for the degree */
+    font-weight: 400;
+    color: black; /* Changed to black */
+    display: block;
+    margin-top: 1rem;
+}
+
+/* Circular Profile Image with Black Border */
 .profile-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    margin-left: 1.5rem;
+    margin-left: 1.5rem; /* Space between the image and the text */
     margin-top: -3rem;
-    border: 5px solid black;
+    border: 5px solid black; /* Black border with 5px thickness */
 }
 
 .profile-image img {
@@ -96,24 +112,24 @@ ul li a:hover {
 
 .text h3 {
     font-size: 1.5rem;
-    color: black;
+    color: black; /* Changed to black */
 }
 
 .text h1 {
     font-size: 3rem;
-    color: black;
+    color: black; /* Changed to black */
 }
 
 .text p {
     font-size: 1.125rem;
     line-height: 1.5;
-    color: black;
+    color: black; /* Changed to black */
 }
 
 .text a {
     text-decoration: none;
-    color: orange;
-    background: black;
+    color: orange; /* Changed to black */
+    background: black; /* Changed background to black */
     margin-top: 1.5rem;
     padding: 0.625rem 1.125rem;
     border-radius: 10px;
@@ -122,7 +138,7 @@ ul li a:hover {
 }
 
 .text a:hover {
-    background: orange;
+    background: orange; /* Hover color also black */
 }
 
 /* Flexbox for icons */
@@ -134,24 +150,24 @@ ul li a:hover {
 
 .icons a {
     text-decoration: none;
-    color: black;
+    color: black; /* Changed to black */
     margin: 0 1rem;
 }
 
 .icons ion-icon {
-    color: black;
+    color: black; /* Changed to black */
     font-size: 2.5rem;
     transition: 0.4s ease;
 }
 
 .icons ion-icon:hover {
-    color: black;
+    color: black; /* Hover color also black */
 }
 
 /* Apply the Roboto font to the whole body */
 body {
     font-family: 'Roboto', sans-serif;
-    color: black;
+    color: black; /* Changed to black */
 }
 
 /* Education Section */
@@ -314,68 +330,19 @@ body {
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    /* Navbar: stack items vertically */
     .navbar {
         flex-direction: column;
-        padding: 1rem;
     }
 
-    /* Center the logo when the navbar is stacked */
-    .navbar .logo {
-        margin-bottom: 1rem;
-    }
-
-    /* Adjust the profile section layout */
-    .info {
-        padding-left: 0; /* Remove the extra padding on smaller screens */
-        margin-top: 3rem; /* Adjust margin to avoid overlap */
-    }
-
-    .profile-image {
-        margin-left: 0;
-        margin-top: 1rem; /* Adjust top margin to avoid overlap */
-        width: 150px;
-        height: 150px; /* Resize the image for smaller screens */
-    }
-
-    .text {
-        padding: 0 1rem; /* Add padding to text */
-    }
-
-    .text h1 {
-        font-size: 2rem; /* Reduce the font size */
-    }
-
-    .text p {
-        font-size: 1rem; /* Adjust paragraph font size */
-    }
-
-    /* Ensure the menu items stay horizontal */
-    ul {
+    .navbar ul {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        align-items: center;
     }
 
-    ul li {
-        padding: 0.5rem 0.75rem;
+    .navbar li {
+        padding: 0.5rem;
     }
 
-    .icons {
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .main {
-        height: auto; /* Allow content to overflow if necessary on small screens */
-    }
-
-    /* Further adjust the text and image sizes */
-    .text h1 {
-        font-size: 1.8rem;
-    }
-
-    .text p {
-        font-size: 0.9rem;
-    }
+    
 }
