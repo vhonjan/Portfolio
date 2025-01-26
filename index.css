@@ -68,14 +68,16 @@ ul li a:hover {
 
 /* Text styling */
 .hi-text {
-    font-size: 1.5rem; /* Smaller font for "Hi, I'm" */
+    font-size: 1.2rem; /* Smaller font for "Hi, I'm" */
+    font-family: 'Arial', sans-serif; /* Changed font to Arial */
     color: black; /* Changed to black */
     margin-bottom: 0.5rem;
 }
 
 .large-name {
-    font-size: 4rem; /* Adjust the size as needed */
-    font-weight: 700;
+    font-size: 3rem; /* Smaller name size */
+    font-family: 'Courier New', monospace; /* Changed font to Courier New */
+    font-weight: 600;
     color: black; /* Changed to black */
 }
 
@@ -89,13 +91,13 @@ ul li a:hover {
 
 /* Circular Profile Image with Black Border */
 .profile-image {
-    width: 200px;
-    height: 200px;
+    width: 150px; /* Smaller image size */
+    height: 150px; /* Smaller image size */
     border-radius: 50%;
     overflow: hidden;
     margin-left: 1.5rem; /* Space between the image and the text */
-    margin-top: -3rem;
-    border: 5px solid black; /* Black border with 5px thickness */
+    margin-top: -2rem; /* Adjusted margin-top */
+    border: 4px solid black; /* Black border with 4px thickness */
 }
 
 .profile-image img {
@@ -344,5 +346,10 @@ body {
         padding: 0.5rem;
     }
 
-    
+    @media (max-width: 768px) {
+        .main {
+        background-attachment: scroll;
+    }
+}
+
 }
