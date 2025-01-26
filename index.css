@@ -20,8 +20,8 @@
 .navbar {
     width: 100%; /* Make it take up the full width */
     display: flex;
-    justify-content: center; /* Centers the menu horizontally */
-    padding: 1.5rem 0;
+    justify-content: space-between; /* Ensures logo and menu are spaced out */
+    padding: 1.5rem;
     align-items: center;
     position: relative;
     margin-top: 5%; /* Adds space below the profile section */
@@ -333,23 +333,31 @@ body {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        position: fixed; /* Fix the navbar to the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: row; /* Side by side layout */
+        justify-content: space-between; /* Aligns the logo and menu items side by side */
+        padding: 1rem; /* Adjusts padding */
     }
 
     .navbar ul {
         display: flex;
-        
-        
+        flex-direction: row; /* Menu items appear horizontally */
+        padding: 0;
+        margin-left: auto; /* Move menu to the right */
     }
 
     .navbar li {
         padding: 0.5rem;
     }
 
-    @media (max-width: 768px) {
-        .main {
+    .navbar .logo {
+        width: 120px; /* Adjust logo size for mobile */
+    }
+
+    .main {
         background-attachment: scroll;
     }
-}
-
 }
